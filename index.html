@@ -1,0 +1,615 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Raees Ahamed | Mechanical Engineer</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+color:white;
+background-color:#000;
+
+background-image:
+linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+url("images/hex-bg.png");
+
+background-size:33% 100%;
+background-repeat:no-repeat;
+background-position:left center;
+background-attachment:fixed;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:18px 8%;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(8px);
+z-index:999;
+}
+
+nav h2{
+color:#00ffc3;
+}
+
+nav a{
+color:white;
+margin-left:18px;
+text-decoration:none;
+font-size:14px;
+}
+
+nav a:hover{
+color:#00ffc3;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+padding-left:40%;
+}
+
+.hero h1{
+font-size:50px;
+color:#00ffc3;
+}
+
+.hero h3{
+margin-top:10px;
+font-weight:400;
+}
+
+.hero p{
+margin-top:20px;
+max-width:520px;
+line-height:1.7;
+color:#ccc;
+}
+
+.btn{
+margin-top:25px;
+padding:12px 25px;
+background:#00ffc3;
+border:none;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#00cfa0;
+}
+
+/* SECTION */
+
+section{
+padding:90px 8%;
+padding-left:40%;
+}
+
+h2{
+margin-bottom:35px;
+color:#00ffc3;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-bottom:40px;
+}
+
+.stat{
+background:#111;
+padding:25px;
+border-radius:10px;
+text-align:center;
+border:1px solid #00ffc344;
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:25px;
+}
+
+.project-card{
+background:#111;
+padding:30px 20px;
+border-radius:12px;
+border:1px solid #00ffc322;
+cursor:pointer;
+min-height:200px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.project-card:hover{
+transform:translateY(-6px);
+border-color:#00ffc3;
+}
+
+/* ROLES */
+
+.roles{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.role-card{
+background:#111;
+padding:25px;
+border-radius:10px;
+border:1px solid #00ffc322;
+cursor:pointer;
+}
+
+.role-card:hover{
+border-color:#00ffc3;
+transform:translateY(-3px);
+}
+
+/* CONTACT */
+
+.contact-icons{
+margin-top:25px;
+display:flex;
+gap:25px;
+font-size:26px;
+}
+
+.contact-icons a{
+color:white;
+}
+
+.contact-icons a:hover{
+color:#00ffc3;
+transform:scale(1.2);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+color:#888;
+}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
+
+.modal-content{
+background:#111;
+padding:30px;
+border-radius:10px;
+max-width:800px;
+width:90%;
+text-align:center;
+}
+
+.modal h3{
+color:#00ffc3;
+margin-bottom:10px;
+}
+
+/* IMAGE SIZE IMPROVED */
+
+.modal img{
+width:60%;
+max-width:420px;
+margin-top:20px;
+border-radius:8px;
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* CAPTION */
+
+#modal-caption{
+margin-top:8px;
+font-size:14px;
+color:#aaa;
+}
+
+.close{
+position:absolute;
+top:25px;
+right:35px;
+font-size:30px;
+cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+body{
+background-size:100% 250px;
+background-position:top;
+}
+
+.hero{
+padding-left:8%;
+text-align:center;
+justify-content:center;
+}
+
+section{
+padding-left:8%;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.projects{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<nav>
+
+<h2>RaeesAhamed</h2>
+
+<div>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#leadership">Leadership</a>
+<a href="#experience">Experience</a>
+<a href="#certificates">Certificates</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+
+<div class="hero">
+
+<div>
+
+<h1>Raees Ahamed</h1>
+
+<h3>Mechanical Engineer | Minor in AI & ML</h3>
+
+<p>
+Engineering with Purpose. Innovating with Intelligence.
+Passionate about smart manufacturing, automation,
+additive manufacturing, and data-driven engineering systems.
+</p>
+
+<a href="Raees_Ahamed_Resume_1.pdf" download>
+<button class="btn">Download Resume</button>
+</a>
+
+</div>
+
+</div>
+
+
+<section id="about">
+
+<h2>About</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>8.34</h3>
+<p>Current CGPA</p>
+</div>
+
+<div class="stat">
+<h3>90.6%</h3>
+<p>12th Grade CBSE</p>
+</div>
+
+<div class="stat">
+<h3>8+</h3>
+<p>Leadership Roles</p>
+</div>
+
+</div>
+
+<p>
+
+I am a Mechanical Engineering student at Anna University (CEG) with a minor in Artificial Intelligence & Machine Learning.
+
+My work focuses on integrating intelligent algorithms with mechanical systems through projects in thermal simulation,
+predictive maintenance, automation systems and sustainable engineering design.
+
+My goal is to contribute to the development of intelligent adaptive engineering systems for smart manufacturing and robotics.
+
+Beyond academics I enjoy football, reading books and focus on the latest technology, innovation and personal growth.
+
+</p>
+
+</section>
+
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project-card" onclick="openModal('waam')">
+<h3>WAAM Thermal Analysis</h3>
+<p>ANSYS Simulation</p>
+</div>
+
+<div class="project-card" onclick="openModal('gripper')">
+<h3>Pneumatic Hand Gripper</h3>
+<p>Automation System</p>
+</div>
+
+<div class="project-card" onclick="openModal('eco')">
+<h3>Eco-Friendly Packaging</h3>
+<p>Sustainable Design</p>
+</div>
+
+<div class="project-card" onclick="openModal('predictive')">
+<h3>Predictive Maintenance</h3>
+<p>Machine Learning</p>
+</div>
+
+<div class="project-card" onclick="openModal('wheel')">
+<h3>Composite Wheel</h3>
+<p>Electric Mobility</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="leadership">
+
+<h2>Leadership</h2>
+
+<div class="roles">
+
+<div class="role-card" onclick="openModal('scribbles')">
+<b>Deputy Head of Events & Marketing</b> – Scribbles Club CEG
+</div>
+
+<div class="role-card" onclick="openModal('cuic')">
+<b>Industry Liaison</b> – CUIC Student Team
+</div>
+
+<div class="role-card" onclick="openModal('sme')">
+<b>Workshop Coordinator</b> – Society of Mechanical Engineers
+</div>
+
+<div class="role-card" onclick="openModal('kurukshetra')">
+<b>Guest Lecture Organizer</b> – Kurukshetra Technical Fest
+</div>
+
+<div class="role-card" onclick="openModal('cegaana')">
+<b>Ambassador</b> – CEGAANA
+</div>
+
+</div>
+
+</section>
+
+
+<section id="experience">
+
+<h2>Experience</h2>
+
+<div class="roles">
+
+<div class="role-card" onclick="openModal('siemens')">
+<b>Industrial Mechatronics Internship</b> – MIT Siemens (2025)
+</div>
+
+<div class="role-card" onclick="openModal('ev')">
+<b>EV Technology Internship</b> – Acmegrade (2024)
+</div>
+
+<div class="role-card" onclick="openModal('gian')">
+<b>GIAN Workshop</b> – Repair & Remanufacture of AM Parts
+</div>
+
+</div>
+
+</section>
+
+
+<section id="certificates">
+
+<h2>Certificates</h2>
+
+<div class="projects">
+
+<div class="project-card" onclick="openModal('aukom')">
+<h3>AUKOM Level 1</h3>
+<p>ZEISS Metrology</p>
+</div>
+
+<div class="project-card" onclick="openModal('nptel')">
+<h3>NPTEL Certification</h3>
+<p>Strategic Communication</p>
+</div>
+
+<div class="project-card" onclick="openModal('nestle')">
+<h3>Nestle Sustainability</h3>
+<p>Certification</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Shollingnallur, Chennai</p>
+
+<div class="contact-icons">
+
+<a href="mailto:raeesahamed1234@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+</a>
+
+<a href="tel:6374533026">
+<i class="fa-solid fa-phone"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/raeesahamed-74289a28b" target="_blank">
+<i class="fa-brands fa-linkedin"></i>
+</a>
+
+<a href="https://github.com/raeesahamed1234-rgb" target="_blank">
+<i class="fa-brands fa-github"></i>
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 Raees Ahamed  
+Engineering with Purpose
+
+</footer>
+
+
+<div id="modal" class="modal">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<div class="modal-content">
+
+<h3 id="modal-title"></h3>
+
+<img id="modal-img" style="display:none;">
+
+<p id="modal-caption"></p>
+
+<p id="modal-desc"></p>
+
+</div>
+
+</div>
+
+
+<script>
+
+const data={
+
+waam:{title:"WAAM Thermal Analysis",img:"images/waam.jpeg",caption:"Temperature distribution during WAAM titanium deposition",desc:"Transient thermal simulation of Wire Arc Additive Manufacturing of titanium using ANSYS to study temperature distribution and thermal behavior."},
+
+gripper:{title:"Pneumatic Hand Gripper",img:"images/gripper.jpeg",caption:"Pneumatic automation gripper prototype",desc:"Designed an industrial automation gripper capable of handling 3-5kg payload using pneumatic actuation for manufacturing applications."},
+
+eco:{title:"Eco-Friendly Packaging",img:"images/eco.jpeg",caption:"Biodegradable sustainable packaging concept",desc:"Developed biodegradable packaging capable of decomposing into fertilizer to reduce environmental impact."},
+
+predictive:{title:"Predictive Maintenance",img:"images/predictive.jpeg",caption:"Machine learning prediction model output",desc:"Machine learning model in MATLAB predicting machine failure using temperature, vibration and usage data."},
+
+wheel:{title:"Composite Wheel Design",img:"images/wheel.jpeg",caption:"Lightweight composite EV wheel concept",desc:"Lightweight composite wheel concept for electric mobility with high strength-to-weight ratio."},
+
+scribbles:{title:"Deputy Head of Events & Marketing",img:"images/scribbles.jpg",caption:"Scribbles Fine Arts Club",desc:"Responsible for marketing strategy and event coordination for Scribbles."},
+
+cuic:{title:"Industry Liaison – CUIC",img:"images/cuic.jpeg",caption:"Industry collaboration work",desc:"Worked on connecting startups and industry collaborations with Anna University students."},
+
+sme:{title:"Workshop Coordinator",img:"images/sme.png",caption:"Mechanical engineering workshops",desc:"Organized technical workshops and industry sessions for mechanical engineering students."},
+
+kurukshetra:{title:"Guest Lecture Organizer",img:"images/kurukshetra.png",caption:"Kurukshetra technical festival",desc:"Managed guest speakers and technical sessions."},
+
+cegaana:{title:"CEGAANA Ambassador",img:"images/cegaana.png",caption:"Alumni networking events",desc:"Promoting alumni engagement and networking activities."},
+
+siemens:{title:"Industrial Mechatronics Internship",img:"images/siemens.jpg",caption:"MIT Siemens training",desc:"Hands-on exposure to assembly line automation systems."},
+
+ev:{title:"EV Technology Internship",img:"images/ev.jpg",caption:"Electric vehicle technologies",desc:"Explored motors, controllers and battery systems."},
+
+gian:{title:"GIAN Workshop",img:"images/gian.jpeg",caption:"Additive manufacturing workshop",desc:"Workshop on Repair and Remanufacture of AM parts."},
+
+aukom:{title:"AUKOM Level 1",img:"images/aukom.jpg",caption:"ZEISS Industrial Metrology certification",desc:"Certification focusing on coordinate measurement systems."},
+
+nptel:{title:"NPTEL Certification",img:"images/nptel.png",caption:"NPTEL Course Certificate",desc:"Strategic Communication for Sustainable Development."},
+
+nestle:{title:"Nestle Sustainability Certification",img:"images/nestle.png",caption:"Sustainability program",desc:"Program covering sustainability practices in global manufacturing."}
+
+}
+
+function openModal(id){
+
+document.getElementById("modal").style.display="flex"
+
+document.getElementById("modal-title").innerText=data[id].title
+document.getElementById("modal-desc").innerText=data[id].desc
+
+const img=document.getElementById("modal-img")
+const caption=document.getElementById("modal-caption")
+
+if(data[id].img){
+img.src=data[id].img
+img.style.display="block"
+caption.innerText=data[id].caption || ""
+}else{
+img.style.display="none"
+caption.innerText=""
+}
+
+}
+
+function closeModal(){
+document.getElementById("modal").style.display="none"
+}
+
+</script>
+
+</body>
+</html>
+```
